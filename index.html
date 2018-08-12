@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--INDEX OF THE WEBSITE
+        1. External Links
+        2. Header
+        3. "About Her" Article
+        4. "Work" Article
+        5. "Ideas" Article
+        6. Quotes
+        7. Footer-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Jesica Prades">
+    <meta name="description" content="An Ayn Rand Tribute page, a responsive web design project for Free Code Camp">
+    <meta name="keywords" content="ayn rand, tribute page, free code camp, fcc, responsive, web, design">
+    <title>Ayn Rand Tribute Page</title>
+    <!--------------------------------------------
+         EXTERNAL LINKS
+         --------------------------------------------->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--------------------------------------------
+HEADER
+--------------------------------------------->
+<nav class="navbar">
+    <ul class="navbar__ul">
+        <li class="navbar__li"><a class="navbar__li__a" href="#">Home</a></li>
+        <li class="navbar__li"><a class="navbar__li__a" href="#about-her">About her</a></li>
+        <li class="navbar__li"><a class="navbar__li__a" href="#work">Work</a></li>
+        <li class="navbar__li"><a class="navbar__li__a" href="#ideas">Ideas</a></li>
+    </ul>
+</nav>
+<header class="header">
+    <h1 class="header__title">Ayn Rand </br><span class="header__title_span">-Tribute Page-</span></h1>
+    <div class="index-quote-generator">
+
+        <blockquote id="quote" class="blockquote"></blockquote>
+        <i class="fas fa-random header_icon" onclick="updateQuote()"></i>
+    </div>
+</header>
+<!--------------------------------------------
+"ABOUT HER" ARTICLE
+--------------------------------------------->
+<main>
+    <article class="about-her articles_background-color" id="about-her">
+        <h2 class="title__articles">ABOUT HER</h2>
+        <div class="about-her__life-column">
+            <img class="about-her__img img_responsive" src="images/aynRand.jpg" alt="Ayn Rand" data-aos="fade-up">
+            <h3 class="subtitles__articles about-her__subtitles">Life</h3>
+            <p class="about-her__first-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat iaculis odio, sit amet
+                consectetur velit mattis non. Vivamus non velit id mi efficitur porttitor. Donec ut lobortis arcu.
+                Donec vestibulum diam at tortor facilisis sollicitudin. <span class="span_purple">Sed ut turpis egestas, fringilla libero eget,
+                semper tortor</span>. Morbi sed est sed enim cursus tempor eu nec dolor. Vestibulum ante ipsum primis in
+                faucibus orci luctus et ultrices posuere cubilia Curae; Nunc sit amet vehicula quam. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Pellentesque placerat iaculis odio, sit amet consectetur velit mattis
+                non. Vivamus non velit id mi efficitur porttitor. Donec ut lobortis arcu. Donec vestibulum diam at
+                tortor facilisis sollicitudin.</p>
+            <p class="about-her__second-paragraph">Nunc consecteturodio ligula, vel ullamcorper mauris venenatis eget. Morbi id nunc feugiat, facilisis lorem
+                ut, efficitur leo. Donec aliquam est accumsan orci pretium pretium. Praesent dictum vulputate nunc, in
+                molestie dolor sagittis vitae. Sed mollis, dolor id <span class="span_purple">venenatis cursus, ex dui scelerisque justo, nec
+                condimentum arcu justo a felis</span>. Proin tempus, augue ut facilisis sagittis, orci nibh placerat urna,
+                eget fermentum ligula lacus vitae erat. Sed porttitor ipsum massa, a ullamcorper ante commodo in.</p>
+        </div>
+        <div class="about-her__novelist-column">
+            <h3 class="subtitles__articles about-her__subtitles" data-aos="fade-up">Novelist</h3>
+            <img class="img_responsive hide_img" src="images/aynRandHat.jpg" alt="Ayn Rand">
+            <p class="about-her__first-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat iaculis odio, sit amet
+                consectetur velit mattis non. Vivamus non velit id mi efficitur porttitor. Donec ut lobortis arcu.
+                Donec vestibulum diam at tortor facilisis sollicitudin. <span class="span_purple">Sed ut turpis egestas, fringilla libero eget,
+                semper tortor</span>. Morbi sed est sed enim cursus tempor eu nec dolor. Vestibulum ante ipsum primis in
+                faucibus orci luctus et ultrices posuere cubilia Curae; Nunc sit amet vehicula quam. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Pellentesque placerat iaculis odio, sit amet consectetur velit mattis
+                non. Vivamus non velit id mi efficitur porttitor. </p>
+            <p class="about-her__second-paragraph">Nunc consecteturodio ligula, vel ullamcorper mauris venenatis eget. Morbi id nunc feugiat, facilisis lorem
+                ut, efficitur leo. Donec aliquam est accumsan orci pretium pretium. Praesent dictum vulputate nunc, in
+                molestie dolor sagittis vitae. Sed mollis, dolor id <span class="span_purple">venenatis cursus, ex dui scelerisque justo, nec
+                condimentum arcu justo a felis</span>. Proin tempus, augue ut facilisis sagittis, orci nibh placerat urna,
+                eget fermentum ligula lacus vitae erat. Sed porttitor ipsum massa, a ullamcorper ante commodo in.</p>
+        </div>
+        <a class="articles__button_anchor" href="articles/about-her.html"><button class="articles__button" >MORE</button></a>
+    </article>
+
+    <!--------------------------------------------
+    "WORK" ARTICLE
+    --------------------------------------------->
+    <article class="articles_background-color" id="work">
+        <h2 class="title__articles work__title">WORK</h2>
+        <p class="work__p">Howard Roark. John Galt. Dagny Taggart. Hank Rearden. The heroes of The Fountainhead and Atlas Shrugged are
+            famous because they're unique. Rand's stories, full of drama and intrigue, businessmen, inventors,
+            architects, workers and scientists as noble, passionate figures.</p>
+        <h3 class="subtitles__articles work__subtitles" data-aos="fade-up">Fiction</h3>
+        <div class="work_fiction">
+            <figure>
+                <img src="images/weTheLiving.jpg" class="work__images_theme img_responsive" alt="We the living book">
+                <figcaption class="work__figcaption">We the living <span class="work__figcaption_span">(1936)</span></figcaption>
+            </figure>
+            <figure>
+                <img src="images/anthem.jpg" class="work__images_theme img_responsive" alt="Anthem book">
+                <figcaption class="work__figcaption">Anthem <span class="work__figcaption_span">(1938)</span></figcaption>
+            </figure>
+            <figure>
+                <img src="images/Fountainhead.jpg" class="work__images_theme img_responsive" alt="The Fountainhead book">
+                <figcaption class="work__figcaption">The Fountainhead <span class="work__figcaption_span">(1943)</span></figcaption>
+            </figure>
+            <figure>
+                <img src="images/atlasShrugged.jpg" class="work__images_theme" alt="Atlas Shrugged book">
+                <figcaption class="work__figcaption">Atlas Shrugged <span class="work__figcaption_span">(1957)</span></figcaption>
+            </figure>
+        </div>
+        <h3 class="subtitles__articles work__subtitles" data-aos="fade-up">Non-Fiction</h3>
+        <div class="work__nonfiction">
+            <figure>
+                <img src="images/forTheNewIntellectual.png" class="work__images_theme img_responsive" alt="For The New Intellectual book">
+                <figcaption class="work__figcaption">For The New Intellectual <span class="work__figcaption_span">(1961)</span></figcaption>
+            </figure>
+            <figure>
+                <img src="images/theIbjectivistNewsletter.jpg" class="work__images_theme img_responsive" alt="The Objectivist Newsletter book">
+                <figcaption class="work__figcaption">The Objectivist Newsletter <span class="work__figcaption_span">(1962)</span></figcaption>
+            </figure>
+            <figure>
+                <img src="images/theVirtueOfSelfishness.jpg" class="work__images_theme img_responsive" alt="The Virtue of Selfishness book">
+                <figcaption class="work__figcaption">The Virtue of Selfishness <span class="work__figcaption_span">(1964)</span></figcaption>
+            </figure>
+            <figure>
+                <img src="images/capitalism.png" class="work__images_theme img_responsive" alt="Capitalism: the unknown ideal book">
+                <figcaption class="work__figcaption">Capitalism: The Unknown Ideal <span class="work__figcaption_span">(1966)</span></figcaption>
+            </figure>
+
+        </div>
+        <a class="articles__button_anchor" href="articles/work.html"><button class="articles__button" >MORE</button></a>
+    </article>
+
+    <!--------------------------------------------
+    "Ideas" ARTICLE
+    --------------------------------------------->
+    <article class="ideas articles_background-color" id="ideas">
+        <h2 class="title__articles ideas_title">Ideas</h2>
+        <div>
+            <img class="img_responsive img_center" src="images/objectivism.jpg" alt="Atlas Shrugged">
+            <h3 class="subtitles__articles" data-aos="fade-up">Objectivism</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat iaculis odio, sit amet
+                consectetur velit mattis non. Vivamus non velit id mi efficitur porttitor. Donec ut lobortis arcu.
+                Donec vestibulum diam at tortor facilisis sollicitudin. <span class="span_purple">Sed ut turpis egestas, fringilla libero eget,
+                semper tortor</span>. Morbi sed est sed enim cursus tempor eu nec dolor. Vestibulum ante ipsum primis in
+                faucibus orci luctus et ultrices posuere cubilia Curae; Nunc sit amet vehicula quam.</p>
+            <p>Nunc consecteturodio ligula, vel ullamcorper mauris venenatis eget. Morbi id nunc feugiat, facilisis lorem
+                ut, efficitur leo. Donec aliquam est accumsan orci pretium pretium. Praesent dictum vulputate nunc, in
+                molestie dolor sagittis vitae. Sed mollis, dolor id <span class="span_purple">venenatis cursus, ex dui scelerisque justo, nec
+                condimentum arcu justo a felis</span>. Proin tempus, augue ut facilisis sagittis, orci nibh placerat urna,
+                eget fermentum ligula lacus vitae erat. Sed porttitor ipsum massa, a ullamcorper ante commodo in.</p>
+        </div>
+        <div>
+            <img class="ideas__img-padding img_responsive img_center" src="images/aynRandCapitalism.jpg" alt="Ayn Rand">
+            <h3 class="subtitles__articles" data-aos="fade-up">Capitalism</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat iaculis odio, sit amet
+                consectetur velit mattis non. Vivamus non velit id mi efficitur porttitor. Donec ut lobortis arcu.
+                Donec vestibulum diam at tortor facilisis sollicitudin. <span class="span_purple">Sed ut turpis egestas, fringilla libero eget,
+                semper tortor</span>. Morbi sed est sed enim cursus tempor eu nec dolor. Vestibulum ante ipsum primis in
+                faucibus orci luctus et ultrices posuere cubilia Curae; Nunc sit amet vehicula quam.</p>
+            <p>Nunc consecteturodio ligula, vel ullamcorper mauris venenatis eget. Morbi id nunc feugiat, facilisis lorem
+                ut, efficitur leo. Donec aliquam est accumsan orci pretium pretium. Praesent dictum vulputate nunc, in
+                molestie dolor sagittis vitae. Sed mollis, dolor id <span class="span_purple">venenatis cursus, ex dui scelerisque justo, nec
+                condimentum arcu justo a felis</span>. Proin tempus, augue ut facilisis sagittis, orci nibh placerat urna,
+                eget fermentum ligula lacus vitae erat. Sed porttitor ipsum massa, a ullamcorper ante commodo in.</p>
+        </div>
+        <a class="articles__button_anchor" href="articles/ideas.html"><button class="articles__button" >MORE</button></a>
+    </article>
+</main>
+<!--------------------------------------------
+    FOOTER
+    --------------------------------------------->
+<footer class="footer">
+    <p class="footer__p">&copy; Jesica Prades 2018</p>
+</footer>
+
+<!--------------------------------------------
+  SCRIPTS
+--------------------------------------------->
+<script src="quote.js" type="text/javascript"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!--AOS Animation Library-->
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
