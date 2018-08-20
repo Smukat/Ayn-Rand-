@@ -1,0 +1,129 @@
+
+/*--------------------------------------------------------------
+MAIN PAGE
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+css Grid layout for WIDER SCREENS, when browser supports grid:
+--------------------------------------------------------------*/
+@media screen and (min-width: 34em) {
+    @supports (display: grid) {
+
+        /* ABOUT HER ARTICLE
+         **********************/
+        /*LIFE COLUMN*/
+        .about-her__life-column {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                    "header header"
+                    "sidebar main"
+                    "footer footer";
+        }
+        /*NOVELIST COLUMN*/
+        .about-her__novelist-column {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                    "header header"
+                    "main sidebar"
+                    "footer footer";
+        }
+        .about-her__img {
+            grid-area: sidebar;
+            border-radius: 0;
+            width: 100%;
+        }
+        .about-her__subtitles {
+            grid-area: header;
+        }
+        .about-her__first-paragraph{
+            grid-area: main;
+        }
+        .about-her__second-paragraph {
+            grid-area: footer;
+        }
+        .hide_img {
+            display: inline;
+            grid-area: sidebar;
+            align-self: center;
+        }
+
+        /* WORK ARTICLE
+         **********************/
+        .work_fiction,
+        .work__nonfiction{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .work__p {
+            text-align: center;
+        }
+
+        /*--------------------------------------------------------------
+        IDEAS PAGE
+        --------------------------------------------------------------*/
+
+        /* INTRODUCTION SECTION
+         **********************/
+        .ideas__introduction-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr auto auto;
+            grid-template-areas:
+                    "main main"
+                    "img side"
+                    "footer footer";
+        }
+        .intro-p {
+            grid-area: main;
+        }
+        .ideas-section__ul {
+            grid-area: side;
+            align-self: center;
+        }
+        .ideas__img-intro {
+            grid-area: img;
+            padding-top: 1em;
+        }
+        .intro-last-p {
+            grid-area: footer;
+        }
+        /* BELIEVES SECTION
+         **********************/
+        .believes_section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr;
+            grid-template-areas:
+                    "side footer"
+                    "main main";
+        }
+        .believes1 {
+            grid-area: side;
+        }
+        .believes2 {
+            grid-area: footer;
+        }
+        .objectivism_section {
+            grid-area: main
+        }
+        .objectivism__img {
+            padding-top: 2em;
+        }
+    } /* @supports grid*/
+} /* @media query*/
+
+@media screen and (min-width: 1024px) {
+    @supports (display: grid) {
+        body {
+            width: 68%;
+            margin: auto;
+        }
+    }
+
+}

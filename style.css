@@ -1,34 +1,11 @@
 /*--------------------------------------------------------------
-Accessibility
+COMPONENTS
 --------------------------------------------------------------*/
-/* Text meant only for screen readers */
-.screen-reader-text {
-    clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-}
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus {
-    background-color: #f1f1f1;
-    border-radius: 3px;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-    clip: auto !important;
-    color: #21759b;
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    height: auto;
-    left: 5px;
-    line-height: normal;
-    padding: 15px 23px 14px;
-    text-decoration: none;
-    top: 5px;
-    width: auto;
-    z-index: 100000; /* Above WP toolbar */
-}
+@import url("css/reset.css");
+@import url("css/accessibility.css");
+@import url("css/layout.css");
+@import url("css/typography.css");
+
 /*--------------------------------------------------------------
 General styles
 --------------------------------------------------------------*/
@@ -36,14 +13,12 @@ body {
     margin: 0;
 }
 p {
-    /*text-align: center;*/
     font-family: 'Open Sans', sans-serif;
     margin-left: 0.8em;
     margin-right: 0.8em;
     color: #4a4a4a;
     margin-bottom: 0;
 }
-
 .img_responsive {
     max-width: 100%;
     height: auto;
@@ -132,6 +107,10 @@ p {
 .hide_img {
     display: none;
 }
+/*--------------------------------------------------------------
+MAIN PAGE
+--------------------------------------------------------------*/
+
 /* Navbar */
 .navbar {
     background-color: #282828;
@@ -239,6 +218,114 @@ p {
 }
 
 /*--------------------------------------------------------------
+ABOUT HER PAGE
+--------------------------------------------------------------*/
+/* "Quote" Section */
+.quote_background {
+    background: url("images/bgAboutHer.jpg") no-repeat #f6f6f6 bottom right;
+
+}
+.quote__figure {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.blockquote__figcaption {
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+}
+.blockquote__figcaption_span {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+/* "Circles" Section */
+.circle__section {
+    padding-top: 1em;
+    padding-bottom: 2em;
+    margin: auto;
+    text-align: center;
+}
+.circle {
+    height: 7em;
+    width: 7em;
+    display: inline-block;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background-color: #ae00ff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: #fff;
+}
+.circle:focus {
+    outline: 0;
+}
+
+/*--------------------------------------------------------------
+WORK PAGE
+--------------------------------------------------------------*/
+.work_section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.figure {
+    width: 50%;
+    margin: 0;
+    margin-bottom: 1.5em;
+}
+.figure__img {
+    width: 50%;
+}
+
+/*--------------------------------------------------------------
+IDEAS PAGE
+--------------------------------------------------------------*/
+/*"Introduction" Section */
+.ideas-section__ul {
+    font-family: 'Open Sans', sans-serif;
+    color: #4a4a4a;
+}
+
+/*"Believes" Section */
+.believes-section_background {
+    border-right: 1px solid #530f5c;
+    border-bottom: 1px solid #530f5c;
+    border-left: 1px solid #530f5c;
+    /*margin-bottom: 1em;*/
+
+}
+.believes-section__title {
+    font-family: 'Roboto', sans-serif;
+    background-color: #530f5c;
+    font-size: 1.8em;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.believes-section__subtitle {
+    font-family: 'Open Sans', sans-serif;
+    color: #403f3f;
+    text-align: center;
+}
+.believes-section___p {
+    font-family: 'Open Sans', sans-serif;
+    color: #403f3f;
+    margin-left: 0.5em;
+    padding-bottom: 2em;
+}
+
+/*--------------------------------------------------------------
 If no grid support, limit width to 50em and center align
 --------------------------------------------------------------*/
 @supports not (display: grid) {
@@ -248,74 +335,3 @@ If no grid support, limit width to 50em and center align
     }
 }
 
-/*--------------------------------------------------------------
-CSS Grid layout for wider screens, when browser supports grid:
---------------------------------------------------------------*/
-@media screen and (min-width: 34em) {
-    @supports (display: grid) {
-
-        /* "About Her" Article */
-        /*LIFE COLUMN*/
-        .about-her__life-column {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            grid-template-rows: auto 1fr auto;
-            grid-template-areas:
-                    "header header"
-                    "sidebar main"
-                    "footer footer";
-        }
-        /*NOVELIST COLUMN*/
-        .about-her__novelist-column {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            grid-template-rows: auto 1fr auto;
-            grid-template-areas:
-                    "header header"
-                    "main sidebar"
-                    "footer footer";
-        }
-        .about-her__img {
-            grid-area: sidebar;
-            border-radius: 0;
-            width: 100%;
-        }
-        .about-her__subtitles {
-            grid-area: header;
-        }
-        .about-her__first-paragraph{
-            grid-area: main;
-        }
-        .about-her__second-paragraph {
-            grid-area: footer;
-        }
-        .hide_img {
-            display: inline;
-            grid-area: sidebar;
-            align-self: center;
-        }
-
-        /* "Work" Article */
-        .work_fiction,
-        .work__nonfiction{
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .work__p {
-            text-align: center;
-        }
-
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    @supports (display: grid) {
-        body {
-            width: 68%;
-            margin: auto;
-        }
-    }
-
-}
